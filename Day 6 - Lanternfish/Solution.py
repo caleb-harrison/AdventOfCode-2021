@@ -19,7 +19,7 @@ def addDays(numberOfDays):
         print("Day", i+1)
 
 def optimalAddDays(days):
-    tracker = [data.count(i) for i in range(9)]
+    tracker = [FISH.count(i) for i in range(9)]
     for day in range(days):
         tracker[(day + 7) % 9] += tracker[day % 9]
     return sum(tracker)
